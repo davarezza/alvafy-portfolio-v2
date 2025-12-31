@@ -1,0 +1,176 @@
+
+// --- DATA GAMBAR DEFAULT PROYEK ---
+    export const projectDefaults = {
+    'proj-1': { img: 'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000', link: '#' },
+    'proj-2': { img: 'https://images.unsplash.com/photo-1551288049-bbbda536639a?q=80&w=1000', link: '#' },
+    'proj-3': { img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000', link: '#' },
+    'proj-4': { img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000', link: '#' },
+    'proj-5': { img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000', link: '#' },
+};
+
+// --- DATA KONTEN WEBSITE ---
+export const content = {
+    // --- DATA ID (INDONESIA) ---
+    id: {
+        nav: [
+            { label: "Beranda", href: "home" },
+            { label: "Tentang", href: "about" },
+            { label: "Proyek", href: "projects" },
+            { label: "Kontak", href: "contact" }
+        ],
+        hero: {
+            greeting: "Halo, Saya",
+            role1: "Seorang",
+            roles: ["Backend Developer", "DevOps Enthusiast", "Computer Science Student"],
+            desc: "Membangun arsitektur backend yang kokoh dan memastikan sistem tetap stabil, aman, dan siap tumbuh tanpa batas.",
+            btnProject: "Lihat Proyek",
+            btnContact: "Kontak Saya",
+            social: {
+                github: "https://github.com/hfdzhummaidiii",
+                linkedin: "https://www.linkedin.com/in/hafidz-humaidi-pratama-busroni-986a75357?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+                instagram: "https://instagram.com/hfdzhummaidiii_",
+                tiktok: "https://www.tiktok.com/@hfdzhummaidiii_",
+            }
+        },
+        about: {
+            title: "Tentang",
+            subtitle: "Saya",
+            desc: "Perpaduan logika kode dan estetika desain.",
+            bio1: "Perjalanan saya di dunia digital dimulai sejak bangku SMK. Sebagai seorang pembelajar otodidak, saya terbiasa memecahkan masalah secara mandiri. Bagi saya, coding adalah seni menyusun logika yang hidup.",
+            bio2: "Saat ini, saya menempuh pendidikan Sastra Inggris di Universitas Widyatama. Kombinasi kemampuan teknis dan komunikasi adalah kekuatan utama saya dalam setiap proyek.",
+            download: "Unduh CV",
+            // --- UPDATE LINK CV DI SINI ---
+            cvUrl: "https://drive.google.com/file/d/1FumKZc5FxMLlKyCyUcfufwnVHCTFrZJ-/view?usp=sharing", 
+            
+            stats: { exp: "Tahun Pengalaman", proj: "Proyek Selesai", client: "Klien Puas" },
+            techTitle: "Creative & Tech Stack",
+            tools: [
+                { id: 'dev-1', name: 'React', type: 'Frontend Lib', iconName: 'code2', color: 'text-cyan-400' }, 
+                { id: 'dev-2', name: 'Tailwind', type: 'CSS Framework', iconName: 'palette', color: 'text-teal-400' }, 
+                { id: 'dev-3', name: 'Firebase', type: 'Backend Service', iconName: 'servercog', color: 'text-orange-400' }, 
+                { id: 'dev-4', name: 'Next.js', type: 'Web Framework', iconName: 'globe2', color: 'text-white' },
+                { id: 'dev-5', name: 'VS Code', type: 'Code Editor', iconName: 'terminal', color: 'text-blue-500' },
+                { id: 'dev-6', name: 'Git / Github', type: 'Version Control', iconName: 'gitbranch', color: 'text-red-500' },
+                { id: 'des-1', name: 'Figma', type: 'UI/UX Design', iconName: 'figma', color: 'text-purple-400' },
+                { id: 'des-2', name: 'Photoshop', type: 'Image Editing', iconName: 'layers', color: 'text-blue-600' },
+                { id: 'des-3', name: 'Lightroom', type: 'Color Grading', iconName: 'brush', color: 'text-cyan-300' },
+                { id: 'des-4', name: 'Illustrator', type: 'Vector Art', iconName: 'pentool', color: 'text-orange-500' },
+                { id: 'des-5', name: 'Canva', type: 'Layout Design', iconName: 'layoutdashboard', color: 'text-cyan-500' },
+                { id: 'des-6', name: 'Sketch', type: 'Prototyping', iconName: 'pencilruler', color: 'text-yellow-500' },
+                { id: 'vid-1', name: 'Premiere Pro', type: 'Video Editing', iconName: 'video', color: 'text-purple-600' },
+                { id: 'vid-2', name: 'After Effects', type: 'Motion VFX', iconName: 'zap', color: 'text-indigo-500' },
+                { id: 'vid-3', name: 'CapCut', type: 'Mobile Editing', iconName: 'phone', color: 'text-white' },
+                { id: 'vid-4', name: 'DaVinci', type: 'Colorist', iconName: 'palette', color: 'text-pink-500' },
+                { id: 'vid-5', name: 'Audition', type: 'Audio Mixing', iconName: 'radio', color: 'text-green-400' },
+                { id: 'vid-6', name: 'OBS Studio', type: 'Streaming', iconName: 'wifi', color: 'text-gray-400' },
+            ]
+        },
+        projects: {
+            title: "Proyek",
+            subtitle: "Terpilih",
+            desc: "Beberapa karya yang menyoroti keahlian saya.",
+            btnAll: "Lihat Semua Proyek",
+            list: [
+                { id: 'proj-1', title: 'Toko Online E-commerce', desc: 'Platform penjualan online yang responsif dengan fitur keranjang dan checkout terintegrasi.', tech: 'React, Tailwind, Firebase' },
+                { id: 'proj-2', title: 'Dashboard Analitik', desc: 'Dashboard interaktif untuk memvisualisasikan data dan metrik bisnis secara real-time.', tech: 'React, Chart.js' },
+                { id: 'proj-3', title: 'Portofolio Pribadi', desc: 'Situs portofolio ini, dirancang untuk menunjukkan keterampilan dan proyek-proyek terbaru.', tech: 'React, OGL, Firebase' },
+                { id: 'proj-4', title: 'Aplikasi Daftar Tugas', desc: 'Aplikasi sederhana untuk manajemen tugas harian dengan fitur drag-and-drop.', tech: 'React, LocalStorage' },
+            ]
+        },
+        contact: {
+    title: "Mari", subtitle: "Terhubung",
+    desc: "Saya selalu terbuka untuk proyek baru atau sekadar obrolan. Kirimkan sinyal Anda.",
+    contactInfo: {
+         email: "WWWW@gmail.com", // <-- EMAIL BARU
+         phone: "+62 123 4567 8999",  // <-- NOMOR BARU
+         // Simpan nomor format mesin untuk link WA
+         waNumber: "6281234567789"        
+    },
+            form: { name: "ID Pengirim / Nama", email: "Frekuensi Email", msg: "Data Transmisi Pesan", btn: "INISIASI TRANSMISI", success: "Pesan Anda telah berhasil terkirim!" }
+        }
+    },
+    // --- DATA EN (INGGRIS) ---
+    en: {
+        nav: [
+            { label: "Home", href: "home" },
+            { label: "About", href: "about" },
+            { label: "Projects", href: "projects" },
+            { label: "Contact", href: "contact" }
+        ],
+        hero: { 
+            greeting: "Hello, I am", role1: "A", roles: ["Backend Developer", "DevOps Enthusiast", "Computer Science Student"], 
+            desc: "Building robust backend architectures and ensure systems stay stable, secure, and ready to scale without limits.", 
+            btnProject: "View Projects", btnContact: "Contact Me",
+            social: {
+
+                //ISI LINK SOSMED DISINI
+                github: "-",
+                linkedin: "-",
+                instagram: "-",
+                tiktok: "-",
+            }
+        },
+        about: {
+            title: "About",
+            subtitle: "Me",
+            desc: "Blending code logic with design aesthetics.",
+            bio1: "My digital journey began in Vocational High School. As a self-taught developer, I am accustomed to solving problems independently. To me, coding is the art of structuring living logic.",
+            bio2: "Currently majoring in English Literature at Widyatama University. The combination of technical skills and communication is my main strength in every project.",
+            download: "Download CV",
+            // --- UPDATE LINK CV DI SINI JUGA ---
+            cvUrl: "-",
+            
+            stats: { exp: "Years Experience", proj: "Projects Done", client: "Happy Clients" },
+            techTitle: "Creative & Tech Stack",
+            tools: [
+                { id: 'dev-1', name: 'React', type: 'Frontend Lib', iconName: 'code2', color: 'text-cyan-400' }, 
+                { id: 'dev-2', name: 'Tailwind', type: 'CSS Framework', iconName: 'palette', color: 'text-teal-400' }, 
+                { id: 'dev-3', name: 'Firebase', type: 'Backend Service', iconName: 'servercog', color: 'text-orange-400' }, 
+                { id: 'dev-4', name: 'Next.js', type: 'Web Framework', iconName: 'globe2', color: 'text-white' },
+                { id: 'dev-5', name: 'VS Code', type: 'Code Editor', iconName: 'terminal', color: 'text-blue-500' },
+                { id: 'dev-6', name: 'Git / Github', type: 'Version Control', iconName: 'gitbranch', color: 'text-red-500' },
+                { id: 'des-1', name: 'Figma', type: 'UI/UX Design', iconName: 'figma', color: 'text-purple-400' },
+                { id: 'des-2', name: 'Photoshop', type: 'Image Editing', iconName: 'layers', color: 'text-blue-600' },
+                { id: 'des-3', name: 'Lightroom', type: 'Color Grading', iconName: 'brush', color: 'text-cyan-300' },
+                { id: 'des-4', name: 'Illustrator', type: 'Vector Art', iconName: 'pentool', color: 'text-orange-500' },
+                { id: 'des-5', name: 'Canva', type: 'Layout Design', iconName: 'layoutdashboard', color: 'text-cyan-500' },
+                { id: 'des-6', name: 'Sketch', type: 'Prototyping', iconName: 'pencilruler', color: 'text-yellow-500' },
+                { id: 'vid-1', name: 'Premiere Pro', type: 'Video Editing', iconName: 'video', color: 'text-purple-600' },
+                { id: 'vid-2', name: 'After Effects', type: 'Motion VFX', iconName: 'zap', color: 'text-indigo-500' },
+                { id: 'vid-3', name: 'CapCut', type: 'Mobile Editing', iconName: 'phone', color: 'text-white' },
+                { id: 'vid-4', name: 'DaVinci', type: 'Colorist', iconName: 'palette', color: 'text-pink-500' },
+                { id: 'vid-5', name: 'Audition', type: 'Audio Mixing', iconName: 'radio', color: 'text-green-400' },
+                { id: 'vid-6', name: 'OBS Studio', type: 'Streaming', iconName: 'wifi', color: 'text-gray-400' },
+            ]
+        },
+        projects: {
+            title: "Selected",
+            subtitle: "Projects",
+            desc: "Some works that highlight my expertise.",
+            btnAll: "View All Projects",
+            list: [
+                { id: 'proj-1', title: 'E-commerce Store', desc: 'Responsive online sales platform with integrated cart and checkout features.', tech: 'React, Tailwind, Firebase' },
+                { id: 'proj-2', title: 'Analytics Dashboard', desc: 'Interactive dashboard for visualizing real-time business data and metrics.', tech: 'React, Chart.js' },
+                { id: 'proj-3', title: 'Personal Portfolio Site', desc: 'This portfolio site, designed to showcase latest skills and projects.', tech: 'React, OGL, Firebase' },
+                { id: 'proj-4', title: 'To-Do List Application', desc: 'Simple application for daily task management with drag-and-drop features.', tech: 'React, LocalStorage' },
+            ]
+        },
+        contact: {
+            title: "Let's", 
+            subtitle: "Connect",
+            desc: "I am always open to new projects or just a chat. Send your signal.",
+            contactInfo: {
+                 email: "HAHAHAHA@gmail.com",
+                 phone: "+62 123 4568 0964",
+                 waNumber: "1234567890"        
+            },
+            form: { 
+                name: "Sender ID / Name", 
+                email: "Email Frequency", 
+                msg: "Message Transmission Data", 
+                btn: "INITIATE TRANSMISSION", 
+                success: "Your message has been successfully sent!" 
+            } 
+        }
+    }
+};

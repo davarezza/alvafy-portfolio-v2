@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Background & Utils */
+.hero-bg::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 85% 20%, rgba(0, 140, 149, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 15% 80%, rgba(50, 50, 200, 0.1) 0%, transparent 50%);
+    filter: blur(60px); pointer-events: none; z-index: 0;
+}
+
+.static-frame-card img {
+    border-radius: 0.75rem; filter: grayscale(20%); transition: filter 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+.static-frame-card:hover img { filter: grayscale(0%); transform: translate(-5px, -5px); box-shadow: 0 20px 40px -10px rgba(0, 140, 149, 0.3); }
+
+/* Animation Utils */
+.animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0; /* Mulai dari invisible */
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Delay bertingkat (Stagger) */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+/* --- GPU ACCELERATION HACKS --- */
+
+/* Terapkan pada container Aurora dan Lanyard */
+.aurora-container, 
+.lanyard-wrapper {
+  /* Memisahkan elemen ke layer compositor sendiri */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Optimasi Scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Mengurangi beban cat (paint) browser */
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in-3d {
+  animation: fadeIn 1s ease-out forwards;
+}
