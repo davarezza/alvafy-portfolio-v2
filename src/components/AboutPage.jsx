@@ -47,16 +47,16 @@ const AboutPage = React.memo(({ t, tools }) => {
                                 {/* STATS DENGAN ANIMASI LABEL */}
                                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 border-t border-b border-gray-800 py-6" ref={bioStatRef}>
                                     <div className={`flex flex-col items-start transition-opacity duration-700 ${shouldAnimateBioStat ? 'opacity-100' : 'opacity-0'}`}>
-                                        <span className="text-4xl md:text-5xl font-bold text-indigo-400 mb-1"><AnimatedCounter end={3} suffix="+" /></span>
+                                        <span className="text-4xl md:text-5xl font-bold text-indigo-400 mb-1"><AnimatedCounter end={1} suffix="+" /></span>
                                         {/* Key disini biar labelnya animasi ulang */}
                                         <span key={t.about.stats.exp} className="text-sm text-gray-500 uppercase tracking-wider font-medium animate-fade-up">{t.about.stats.exp}</span>
                                     </div>
                                     <div className={`flex flex-col items-start transition-opacity duration-700 delay-200 ${shouldAnimateBioStat ? 'opacity-100' : 'opacity-0'}`}>
-                                        <span className="text-4xl md:text-5xl font-bold text-indigo-400 mb-1"><AnimatedCounter end={20} suffix="+" /></span>
+                                        <span className="text-4xl md:text-5xl font-bold text-indigo-400 mb-1"><AnimatedCounter end={10} suffix="+" /></span>
                                         <span key={t.about.stats.proj} className="text-sm text-gray-500 uppercase tracking-wider font-medium animate-fade-up">{t.about.stats.proj}</span>
                                     </div>
                                     <div className={`flex flex-col items-start transition-opacity duration-700 delay-400 ${shouldAnimateBioStat ? 'opacity-100' : 'opacity-0'}`}>
-                                        <span className="text-4xl md:text-5xl font-bold text-indigo-400 mb-1"><AnimatedCounter end={10} suffix="+" /></span>
+                                        <span className="text-4xl md:text-5xl font-bold text-indigo-400 mb-1"><AnimatedCounter end={5} suffix="+" /></span>
                                         <span key={t.about.stats.client} className="text-sm text-gray-500 uppercase tracking-wider font-medium animate-fade-up">{t.about.stats.client}</span>
                                     </div>
                                 </div>

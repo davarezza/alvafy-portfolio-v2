@@ -26,23 +26,22 @@ export const content = {
             btnProject: "Lihat Proyek",
             btnContact: "Kontak Saya",
             social: {
-                github: "https://github.com/hfdzhummaidiii",
-                linkedin: "https://www.linkedin.com/in/hafidz-humaidi-pratama-busroni-986a75357?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-                instagram: "https://instagram.com/hfdzhummaidiii_",
-                tiktok: "https://www.tiktok.com/@hfdzhummaidiii_",
+                github: "https://github.com/davarezza",
+                linkedin: "https://www.linkedin.com/in/m-dava-al-rezza/",
+                instagram: "",
+                tiktok: "",
             }
         },
         about: {
             title: "Tentang",
             subtitle: "Saya",
-            desc: "Perpaduan logika kode dan estetika desain.",
-            bio1: "Perjalanan saya di dunia digital dimulai sejak bangku SMK. Sebagai seorang pembelajar otodidak, saya terbiasa memecahkan masalah secara mandiri. Bagi saya, coding adalah seni menyusun logika yang hidup.",
-            bio2: "Saat ini, saya menempuh pendidikan Sastra Inggris di Universitas Widyatama. Kombinasi kemampuan teknis dan komunikasi adalah kekuatan utama saya dalam setiap proyek.",
+            desc: "Backend Engineer & Infrastructure Explorer",
+            bio1: "Perjalanan teknologi saya dimulai sejak SMK. Sebagai developer pembelajar mandiri, saya terbiasa memecahkan masalah secara independen dan memandang koding sebagai seni menyusun logika \"hidup\" yang tangguh.",
+            bio2: "Saat ini saya menempuh studi Teknik Informatika, di mana saya menjembatani celah antara pengembangan server-side yang kokoh dan praktik DevOps modern untuk membangun sistem yang tidak hanya fungsional, tapi juga skalabel dan aman.",
             download: "Unduh CV",
             // --- UPDATE LINK CV DI SINI ---
             cvUrl: "https://drive.google.com/file/d/1FumKZc5FxMLlKyCyUcfufwnVHCTFrZJ-/view?usp=sharing", 
-            
-            stats: { exp: "Tahun Pengalaman", proj: "Proyek Selesai", client: "Klien Puas" },
+            stats: { exp: "Tahun Pengalaman Kerja", proj: "Proyek Selesai", client: "Kolaborasi Klien" },
             techTitle: "Creative & Tech Stack",
             tools: [
                 { id: 'dev-1', name: 'React', type: 'Frontend Lib', iconName: 'code2', color: 'text-cyan-400' }, 
@@ -102,25 +101,23 @@ export const content = {
             desc: "Building robust backend architectures and ensure systems stay stable, secure, and ready to scale without limits.", 
             btnProject: "View Projects", btnContact: "Contact Me",
             social: {
-
-                //ISI LINK SOSMED DISINI
-                github: "-",
-                linkedin: "-",
-                instagram: "-",
-                tiktok: "-",
+                github: "https://github.com/davarezza",
+                linkedin: "https://www.linkedin.com/in/m-dava-al-rezza/",
+                instagram: "",
+                tiktok: "",
             }
         },
         about: {
             title: "About",
             subtitle: "Me",
-            desc: "Blending code logic with design aesthetics.",
-            bio1: "My digital journey began in Vocational High School. As a self-taught developer, I am accustomed to solving problems independently. To me, coding is the art of structuring living logic.",
-            bio2: "Currently majoring in English Literature at Widyatama University. The combination of technical skills and communication is my main strength in every project.",
+            desc: "Backend Engineer & Infrastructure Explorer",
+            bio1: "My journey in technology began in Vocational High School. As a self-taught developer, I’ve mastered the art of independent problem-solving and view coding as the craft of structuring resilient, \"living\" logic.",
+            bio2: "Currently pursuing a degree in Computer Science, I am bridging the gap between robust server-side development and modern DevOps practices to build systems that are not only functional but also scalable and secure.",
             download: "Download CV",
             // --- UPDATE LINK CV DI SINI JUGA ---
             cvUrl: "-",
             
-            stats: { exp: "Years Experience", proj: "Projects Done", client: "Happy Clients" },
+            stats: { exp: "Years Professional Experience", proj: "Projects Done", client: "Client Collaborations" },
             techTitle: "Creative & Tech Stack",
             tools: [
                 { id: 'dev-1', name: 'React', type: 'Frontend Lib', iconName: 'code2', color: 'text-cyan-400' }, 
