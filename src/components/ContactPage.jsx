@@ -7,7 +7,7 @@ import { Mail, MessageCircle, Wifi, Radio, Send, User, ArrowUpRight } from 'luci
 const ContactPage = React.memo(({ t, lang }) => {
     const formRef = useRef(); // Ref untuk form
     const [loading, setLoading] = useState(false);
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({ name: '', title: '', email: '', message: '' });
 
     const handleChange = (e) => { 
         const { name, value } = e.target; 
@@ -19,12 +19,10 @@ const ContactPage = React.memo(({ t, lang }) => {
         setLoading(true);
         const toastId = toast.loading("Mengirim pesan...");
 
-        // --- GANTI KODE DI BAWAH INI DENGAN ID DARI EMAILJS ANDA ---
-        // AGAR FITUR EMAIL FORM INI BEKERJA
         // Cara dapat: Login EmailJS -> Create Service (Gmail) -> Create Template
-        const SERVICE_ID = '-';  // Ganti dengan Service ID Anda
-        const TEMPLATE_ID = '-'; // Ganti dengan Template ID Anda
-        const PUBLIC_KEY = '-';    // Ganti dengan Public Key Anda
+        const SERVICE_ID = 'service_c1v5pao';
+        const TEMPLATE_ID = 'template_yacnpmk';
+        const PUBLIC_KEY = 'fH7p1jj6wiVVDzuTH';
         // -----------------------------------------------------------
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
@@ -42,7 +40,7 @@ const ContactPage = React.memo(({ t, lang }) => {
     // Siapkan Link WhatsApp
     // Jika waNumber tidak ada di content.js, dia akan ambil dari phone dan hapus spasi/+
     const waNumber = t.contact.contactInfo.waNumber || t.contact.contactInfo.phone.replace(/[^0-9]/g, '');
-    const waLink = `-`;
+    const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(t.contact.contactInfo.message)}`;
 
     return (
         <section id="contact" className="relative w-full flex flex-col justify-center items-center py-20 overflow-hidden">
@@ -96,21 +94,61 @@ const ContactPage = React.memo(({ t, lang }) => {
 
                             {/* KANAN: FORM INPUT */}
                             <div className="md:col-span-3 p-8 md:p-10 relative">
-                                <h4 className="text-xl font-bold text-white mb-6 flex items-center"><Send className="w-5 h-5 mr-3 text-rose-400" /> INITIATE DATA TRANSMISSION</h4>
+                                <h4 className="text-xl font-bold text-white mb-6 flex items-center"><Send className="w-5 h-5 mr-3 text-rose-400" /> {t.contact.headline}</h4>
                                 
                                 <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
-                                    <div className="relative group">
-                                        <User className="absolute left-0 bottom-3 text-gray-500 w-5 h-5 transition-colors group-focus-within:text-indigo-400" />
-                                        <input type="text" name="name" id="name" aria-label="Nama Lengkap" value={formData.name} onChange={handleChange} required className="w-full pl-8 pr-4 py-3 bg-transparent border-b border-gray-700 text-gray-200 outline-none focus:border-indigo-500 placeholder-gray-500 transition-all" placeholder=" " />
-                                        <label htmlFor="name" className="absolute left-8 top-3 text-gray-500 text-sm transition-all group-focus-within:-top-3 group-focus-within:text-xs group-focus-within:text-indigo-400 pointer-events-none">
-                                            <span key={`${lang}-form-name`} className="animate-fade-up">{t.contact.form.name}</span>
-                                        </label>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div className="relative group">
+                                            <User className="absolute left-0 bottom-3 text-gray-500 w-5 h-5 transition-colors group-focus-within:text-indigo-400" />
+                                            <input 
+                                                type="text" name="name" id="name" autoComplete='off' 
+                                                value={formData.name} onChange={handleChange} required
+                                                className="peer w-full pl-8 pr-4 py-3 bg-transparent border-b border-gray-700 text-gray-200 outline-none focus:border-indigo-500 placeholder-gray-500 transition-all" 
+                                                placeholder=" "
+                                            />
+                                            <label 
+                                                htmlFor="name" 
+                                                className="absolute left-8 top-3 text-gray-500 text-sm transition-all pointer-events-none
+                                                        peer-focus:-top-3 peer-focus:text-xs peer-focus:text-indigo-400 
+                                                        peer-[:not(:placeholder-shown)]:-top-3 peer-[:not(:placeholder-shown)]:text-xs"
+                                            >
+                                                <span className="animate-fade-up">{t.contact.form.name}</span>
+                                            </label>
+                                        </div>
+
+                                        <div className="relative group">
+                                            <Send className="absolute left-0 bottom-3 text-gray-500 w-5 h-5 transition-colors group-focus-within:text-teal-400" />
+                                            <input 
+                                                type="text" name="title" id="title" autoComplete='off' 
+                                                value={formData.title} onChange={handleChange}
+                                                className="peer w-full pl-8 pr-4 py-3 bg-transparent border-b border-gray-700 text-gray-200 outline-none focus:border-teal-500 placeholder-gray-500 transition-all" 
+                                                placeholder=" "
+                                            />
+                                            <label 
+                                                htmlFor="title" 
+                                                className="absolute left-8 top-3 text-gray-500 text-sm transition-all pointer-events-none
+                                                        peer-focus:-top-3 peer-focus:text-xs peer-focus:text-teal-400 
+                                                        peer-[:not(:placeholder-shown)]:-top-3 peer-[:not(:placeholder-shown)]:text-xs"
+                                            >
+                                                <span key={`${lang}-form-title`} className="animate-fade-up">{t.contact.form.title}</span>
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div className="relative group">
                                         <Mail className="absolute left-0 bottom-3 text-gray-500 w-5 h-5 transition-colors group-focus-within:text-rose-400" />
-                                        <input type="email" name="email" id="email" aria-label="Alamat Email" value={formData.email} onChange={handleChange} required className="w-full pl-8 pr-4 py-3 bg-transparent border-b border-gray-700 text-gray-200 outline-none focus:border-rose-500 placeholder-gray-500 transition-all" placeholder=" " />
-                                        <label htmlFor="email" className="absolute left-8 top-3 text-gray-500 text-sm transition-all group-focus-within:-top-3 group-focus-within:text-xs group-focus-within:text-rose-400 pointer-events-none">
+                                        <input 
+                                            type="email" name="email" id="email" autoComplete='off' 
+                                            value={formData.email} onChange={handleChange} required 
+                                            className="peer w-full pl-8 pr-4 py-3 bg-transparent border-b border-gray-700 text-gray-200 outline-none focus:border-rose-500 placeholder-gray-500 transition-all" 
+                                            placeholder=" " 
+                                        />
+                                        <label 
+                                            htmlFor="email" 
+                                            className="absolute left-8 top-3 text-gray-500 text-sm transition-all pointer-events-none
+                                                    peer-focus:-top-3 peer-focus:text-xs peer-focus:text-rose-400 
+                                                    peer-[:not(:placeholder-shown)]:-top-3 peer-[:not(:placeholder-shown)]:text-xs"
+                                        >
                                             <span key={`${lang}-form-email`} className="animate-fade-up">{t.contact.form.email}</span>
                                         </label>
                                     </div>

@@ -39,8 +39,7 @@ export const content = {
             bio1: "Perjalanan teknologi saya dimulai sejak SMK. Sebagai developer pembelajar mandiri, saya terbiasa memecahkan masalah secara independen dan memandang koding sebagai seni menyusun logika \"hidup\" yang tangguh.",
             bio2: "Saat ini saya menempuh studi Teknik Informatika, di mana saya menjembatani celah antara pengembangan server-side yang kokoh dan praktik DevOps modern untuk membangun sistem yang tidak hanya fungsional, tapi juga skalabel dan aman.",
             download: "Unduh CV",
-            // --- UPDATE LINK CV DI SINI ---
-            cvUrl: "https://drive.google.com/file/d/1FumKZc5FxMLlKyCyUcfufwnVHCTFrZJ-/view?usp=sharing", 
+            cvUrl: "https://drive.google.com/file/d/188doqS3_pTOLf_f4hx1JC3r02350bOls/view?usp=sharing", 
             stats: { exp: "Tahun Pengalaman Kerja", proj: "Proyek Selesai", client: "Kolaborasi Klien" },
             techTitle: "Creative & Tech Stack",
             tools: [
@@ -78,14 +77,15 @@ export const content = {
         },
         contact: {
     title: "Mari", subtitle: "Terhubung",
-    desc: "Saya selalu terbuka untuk proyek baru atau sekadar obrolan. Kirimkan sinyal Anda.",
+    desc: "Saya selalu terbuka untuk peluang baru dan pertukaran ide. Kirimkan pesan Anda.",
+    headline: "MULAI KIRIM PESAN",
     contactInfo: {
-         email: "WWWW@gmail.com", // <-- EMAIL BARU
-         phone: "+62 123 4567 8999",  // <-- NOMOR BARU
-         // Simpan nomor format mesin untuk link WA
-         waNumber: "6281234567789"        
+         email: "dapva2728@gmail.com",
+         phone: "+62 838 3583 922",
+         waNumber: "628383583922",
+         message: "Hi Dava, "        
     },
-            form: { name: "ID Pengirim / Nama", email: "Frekuensi Email", msg: "Data Transmisi Pesan", btn: "INISIASI TRANSMISI", success: "Pesan Anda telah berhasil terkirim!" }
+            form: { name: "ID Pengirim / Nama", email: "Frekuensi Email", title: "Judul Pesan", msg: "Isi Pesan", btn: "KIRIM PESAN", success: "Pesan Anda telah berhasil terkirim!" }
         }
     },
     // --- DATA EN (INGGRIS) ---
@@ -114,8 +114,7 @@ export const content = {
             bio1: "My journey in technology began in Vocational High School. As a self-taught developer, I’ve mastered the art of independent problem-solving and view coding as the craft of structuring resilient, \"living\" logic.",
             bio2: "Currently pursuing a degree in Computer Science, I am bridging the gap between robust server-side development and modern DevOps practices to build systems that are not only functional but also scalable and secure.",
             download: "Download CV",
-            // --- UPDATE LINK CV DI SINI JUGA ---
-            cvUrl: "-",
+            cvUrl: "https://drive.google.com/file/d/188doqS3_pTOLf_f4hx1JC3r02350bOls/view?usp=sharing",
             
             stats: { exp: "Years Professional Experience", proj: "Projects Done", client: "Client Collaborations" },
             techTitle: "Creative & Tech Stack",
@@ -155,17 +154,20 @@ export const content = {
         contact: {
             title: "Let's", 
             subtitle: "Connect",
-            desc: "I am always open to new projects or just a chat. Send your signal.",
+            desc: "I am open to collaborations, new ideas, or just a chat. Feel free to reach out",
+            headline: "INITIATE SEND MESSAGE",
             contactInfo: {
-                 email: "HAHAHAHA@gmail.com",
-                 phone: "+62 123 4568 0964",
-                 waNumber: "1234567890"        
+                 email: "dapva2728@gmail.com",
+                 phone: "+62 838 3583 922",
+                 waNumber: "628383583922",
+                 message: "Hi Dava, "        
             },
             form: { 
                 name: "Sender ID / Name", 
-                email: "Email Frequency", 
-                msg: "Message Transmission Data", 
-                btn: "INITIATE TRANSMISSION", 
+                email: "Email Frequency",
+                title: "Message Title", 
+                msg: "Message Content", 
+                btn: "SEND MESSAGE", 
                 success: "Your message has been successfully sent!" 
             } 
         }

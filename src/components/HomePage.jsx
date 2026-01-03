@@ -64,7 +64,7 @@ const HomePage = React.memo(({ t, navigate }) => {
                         <a href={t.hero.social.github} target="_blank" rel="noopener noreferrer" aria-label="Github" className="text-gray-400 hover:text-teal-400 hover:scale-110 transition-all duration-300"><Github className="w-6 h-6" /></a>
                         <a href={t.hero.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-[#0077b5] hover:scale-110 transition-all duration-300"><Linkedin className="w-6 h-6" /></a>
                         <a href={t.hero.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-[#E1306C] hover:scale-110 transition-all duration-300"><Instagram className="w-6 h-6" /></a>
-                        <a href={t.hero.social.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-400 hover:text-[#ff0050] hover:scale-110 transition-all duration-300"><TiktokIcon className="w-6 h-6" /></a>
+                        {/* <a href={t.hero.social.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-400 hover:text-[#ff0050] hover:scale-110 transition-all duration-300"><TiktokIcon className="w-6 h-6" /></a> */}
                     </div>
 
                     {/* Typewriter */}
