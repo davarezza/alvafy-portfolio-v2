@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { SimpleSpotlightCard, AnimatedCounter, Icon, getIconComponent } from './UI';
 import Lanyard from '../Lanyard'; 
+import TechStack from "./TechStack";
 
 const AboutPage = React.memo(({ t, tools }) => { 
     const { ref: bioStatRef, inView: bioStatInView } = useInView({ threshold: 0.5, triggerOnce: true }); 
@@ -71,24 +72,11 @@ const AboutPage = React.memo(({ t, tools }) => {
                         </div>
                     </SimpleSpotlightCard>
                 </div>
-                <div className="w-full mt-20" ref={toolsRef}>
-                    <div className="text-center mb-10 flex flex-col items-center">
-                        <h3 key={t.about.techTitle} className="text-2xl font-bold text-white mb-2 animate-fade-up">{t.about.techTitle}</h3>
-                        <div className={`h-1 w-20 mx-auto rounded-full mb-4 transition-all duration-700 ease-out transform origin-left ${shouldAnimateTools ? 'scale-x-100 bg-indigo-500' : 'scale-x-0 bg-gray-700'}`}></div>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        {tools.map((tech, index) => {
-                            const TechIcon = getIconComponent(tech.iconName); 
-                            const delayMs = 100 + Math.floor(index / 4) * 150; 
-                            return (
-                                <div key={tech.id} className={`group p-4 bg-[#1a1a1a]/50 border border-white/30 rounded-xl transition-all duration-500 flex flex-col items-center justify-center space-y-3 cursor-default relative ${shouldAnimateTools ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: shouldAnimateTools ? `${delayMs}ms` : '0s' }}>
-                                    <div className={`p-3 rounded-lg bg-black/40 group-hover:scale-110 transition-transform duration-300 ${tech.color || 'text-white'}`}><TechIcon className="w-8 h-8" /></div>
-                                    <div className="flex flex-col items-center text-center"><span className="text-gray-200 font-semibold text-sm group-hover:text-teal-400 transition-colors">{tech.name}</span><span className="text-[10px] text-gray-500 uppercase tracking-wider mt-1">{tech.type}</span></div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
+                <TechStack
+                    title={t.about.techTitle}
+                    tools={t.about.tools}
+                    shouldAnimate={shouldAnimateTools}
+                />
             </div>
         </section>
     );

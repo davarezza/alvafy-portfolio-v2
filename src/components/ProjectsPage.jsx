@@ -22,7 +22,7 @@ const ProjectsPage = React.memo(({ t, lang, projects, isAdmin, handleEditProject
     };
 
     return (
-        <section id="projects" className="relative w-full min-h-screen flex flex-col justify-center items-center py-20">
+        <section id="projects" className="relative w-full min-h-screen flex flex-col justify-center items-center py-2">
             <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none"></div>
             
             <div className="text-center mb-16 relative z-20 px-4">
